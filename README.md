@@ -21,7 +21,7 @@ Spring provides a `Validator` interface that can be used for validation in all l
 
 `@Valid` & `@Validated` are no different for their task in Spring MVC. But, using `@Validated` is suggested as it's Spring specific.
 
-Spring also supports JSR-303/JSR-349 Bean Validation via `By default use of @EnableWebMvc or <mvc:annotation-driven> automatically registers Bean Validation support in Spring MVC through the LocalValidatorFactoryBean when a Bean Validation provider such as Hibernate Validator is detected on the classpath.` which adapts the Spring `org.springframework.validation.Validator` interface to the Bean Validation `javax.validation.Validator` contract. This class can be plugged into Spring MVC as a global validator.
+Spring also supports JSR-303/JSR-349 Bean Validation via `LocalValidatorFactoryBean` which adapts the Spring `org.springframework.validation.Validator` interface to the Bean Validation `javax.validation.Validator` contract. This class can be plugged into Spring MVC as a global validator.
 
 If the configured `Validator` is a type of `SmartValidator`, Spring MVC executes the  
 `void validate(Object target, Errors errors, Object... validationHints);`
